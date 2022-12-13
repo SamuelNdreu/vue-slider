@@ -61,12 +61,16 @@ createApp ({
         },
 
         startSlider(){
-
-
-        
-
-
-    }
-
+            this.interval = setInterval(() => {
+                this.activeIndex++;
+                if (this.activeIndex >= this.slides.length){
+                    this.activeIndex = 0;
+                }    
+            }, 3200);    
+        }    
+    },
+    created(){
+    this.startSlider()
+    }    
     
 }).mount ('#app');
