@@ -94,6 +94,7 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     top: 35%;
     left: 50%;
     transform: translate(-50%) rotate(-45deg);
+    
 }
 
 .next::before {

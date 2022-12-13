@@ -36,7 +36,7 @@ createApp ({
     methods: {
         nextSlide(){
             this.activeIndex++;
-            if (this.activeIndex >= this.imageList.length){
+            if (this.activeIndex >= this.slides.length ){
                 this.activeIndex = 0;
             }
         },
@@ -44,7 +44,7 @@ createApp ({
         previousSlide(){
             this.activeIndex--;
             if (this.activeIndex < 0) {
-                this.activeIndex = this.imageList.length - 1;
+                this.activeIndex = this.slides.length - 1;
             }
         },
 
