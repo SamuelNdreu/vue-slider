@@ -6,7 +6,7 @@ createApp ({
     data () {
         return {
             activeIndex : 0,
-            imageList : [
+            slides : [
                 {
                     image: 'img/01.webp',
                         title: 'Marvel\'s Spiderman Miles Morale',
@@ -34,7 +34,7 @@ createApp ({
 
     methods: {
         nextSlide(){
-            this.activeIndex;
+            this.activeIndex++;
             if (this.activeIndex >= this.imageList.length){
                 this.activeIndex = 0;
             }
@@ -46,6 +46,10 @@ createApp ({
                 this.activeIndex = this.imageList.length - 1;
             }
         },
+
+        currentThumbnails(index){
+            this.activeIndex = index;
+        }
     }
 
     
