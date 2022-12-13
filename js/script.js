@@ -5,6 +5,7 @@ const { createApp } = Vue;
 createApp ({
     data () {
         return {
+            interval: null,
             activeIndex : 0,
             slides : [
                 {
@@ -49,7 +50,22 @@ createApp ({
 
         currentThumbnails(index){
             this.activeIndex = index;
-        }
+        },
+
+        goToSlide(index){
+            this.activeIndex = index;
+        },
+
+        pauseSlider(){
+            clearInterval(this.interval);
+        },
+
+        startSlider(){
+
+
+        
+
+
     }
 
     
