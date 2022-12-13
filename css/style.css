@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(0, 21, 65);
+}
+
 .container {
     height: 100vh;
     display: flex;
@@ -50,7 +54,7 @@
     object-fit: cover;
 }
 
-.thumb.active {
+.active {
     border: 2px solid #ccc;
     opacity: 1;
 }
