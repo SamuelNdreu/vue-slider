@@ -52,17 +52,22 @@ createApp ({
             this.activeIndex = index;
         },
 
-        autoPlay(){
-            this.interval = setInterval(this.nextImg, 1000);
+        activateautoPlay(){
+            if ( this.autoplay === null) {
+            this.interval = setInterval (() => {
+                this.nextSlide ();
+            }, 3000 ); 
+            }
         },
 
-        clearInterval(){
-            clearInterval(this.interval);
+        stopAutoplay(){
+            clearInterval(this.autoplay);
+            this.autoplay = null;
         }    
     },
 
     created(){
-    this.autoPlay();
+    this.activateautoPlay();
     }    
     
 }).mount ('#app');
