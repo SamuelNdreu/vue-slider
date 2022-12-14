@@ -52,25 +52,17 @@ createApp ({
             this.activeIndex = index;
         },
 
-        goToSlide(index){
-            this.activeIndex = index;
+        autoPlay(){
+            this.interval = setInterval(this.nextImg, 1000);
         },
 
-        pauseSlider(){
+        clearInterval(){
             clearInterval(this.interval);
-        },
-
-        startSlider(){
-            this.interval = setInterval(() => {
-                this.activeIndex++;
-                if (this.activeIndex >= this.slides.length){
-                    this.activeIndex = 0;
-                }    
-            }, 3200);    
         }    
     },
+
     created(){
-    this.startSlider()
+    this.autoPlay();
     }    
     
 }).mount ('#app');

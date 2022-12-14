@@ -77,6 +77,10 @@ body {
     bottom: 0;
 }
 
+.slider-wrapper:hover{
+
+}
+
 /*
 EXTRA: in questo esempio gli accordion vengono creati
 usando 2 bordi di un quadratino ruotato di 45 gradi
